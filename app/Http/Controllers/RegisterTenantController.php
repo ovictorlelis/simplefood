@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Tenant;
 use Illuminate\Http\Request;
 
 class RegisterTenantController extends Controller
@@ -13,6 +14,9 @@ class RegisterTenantController extends Controller
 
     public function store(Request $request)
     {
-        dd($request->all());
+        $tenant = Tenant::create($request->all());
+        $tenant->createDomain($request->domain . '.simplefood.test');
+
+        dd($tenant);
     }
 }

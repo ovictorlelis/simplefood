@@ -14,7 +14,8 @@
             <x-input-label :value="__('Domínio')" for="domain" />
             <div class="flex items-baseline">
                 <x-text-input :value="old('domain')" autocomplete="domain" autofocus class="block mt-1 mr-2 w-2/3"
-                    id="domain" name="domain" required type="text" /><span class="text-white">.localhost</span>
+                    id="domain" name="domain" required type="text" /><span
+                    class="text-white">.simplefood.test</span>
             </div>
             <x-input-error :messages="$errors->get('domain')" class="mt-2" />
         </div>
